@@ -8,7 +8,7 @@
 <body>
   <header class="hero">
     <div class="hero-section-text">
-      <h1>Back Trekking</h1>
+      <h1>Video Store</h1>
       <span><h5>
         <button id="show-movies" class="button secondary hollow">Show Movies</button>
         <button id="movie-create-new-btn" class="button secondary hollow">Create New Movie</button>
@@ -31,7 +31,7 @@
     </article> -->
 
     <!-- MOVIE LIST #movie-list -->
-    <div id="list">
+    <div id="movie-list">
       <section>
         <table id="movie-list-table" class="hover stack">
           <thead>
@@ -68,20 +68,16 @@
   <!-- MOVIES TEMPLATE -->
   <script type="text/template" id="movies-template">
     <tr data-id="<%- id %>" id="<%- id %>" class="movies">
-      <td>
-        <img src="<%- imgUrl -%>">
-      </td>
+
       <td>
         <%- title %>
       </td>
       <td>
-        <%- releaseDate %>
-      </td>
-      <td>
-        <%- inventory %>
+        <%- release_date %>
       </td>
     </tr>
   </script>
+
 
   <!-- CREATE NEW MOVIE TEMPLATE -->
   <!-- <script type="text/template" id="create-new-movie-template">
@@ -101,7 +97,8 @@
 
       <input type="submit" value="Add New Movie" class="button"></input>
     </form>
-  </script> -->
+  </script>
+-->
 
   <script src="/app.bundle.js"></script>
 

@@ -7,16 +7,15 @@ import Movie from '../models/movie';
 
 const MovieListView = Backbone.View.extend({
 
-initialize(params) {
+  initialize(params) {
 
-},
+  },
 
-render(){
-  console.log("In Movie List render function");
+  render(){
+    console.log("In Movie List render function");
 
-  return this
-};
-
+    return this
+  },
 
 
 
