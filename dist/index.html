@@ -1,15 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Backbone Baseline</title>
-  </head>
-  <body>
-    <main id="main-content">
-      
-    </main>
+<head>
+  <meta charset="utf-8">
+  <title>Video Store</title>
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto" rel="stylesheet">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-section-text">
+      <h1>Back Trekking</h1>
+      <span><h5>
+        <button id="show-movies" class="button secondary hollow">Show Movies</button>
+        <button id="movie-create-new-btn" class="button secondary hollow">Create New Movie</button>
+      </h5></span>
+    </div>
+  </header>
 
-    <script src="/app.bundle.js"></script>
+  <main id="main-content">
+    <!-- MESSAGES -->
+    <span id="status-msg"></span>
+    <span id="confirmation-msg"></span>
 
-  </body>
-  </html>
+    <!-- ADD MOVIE #movie-create-new -->
+    <!-- <article id="movie-create-new" class="columns large-12 small-12">
+      <!-- create new movie form -->
+    </article> -->
+
+    <!-- SINGLE MOVIE #movie-overview -->
+    <!-- <article id="movie-overview" class="columns large-4 small-4 hidden">
+    </article> -->
+
+    <!-- MOVIE LIST #movie-list -->
+    <div id="list">
+      <section>
+        <table id="movie-list-table" class="hover stack">
+          <thead>
+            <th class="sort movie-img">Image</th>
+            <th class="sort title" id="movie-title">Title</th>
+            <th class="sort release-date">Release Date</th>
+            <th class="sort inventory">Inventory</th>
+          </thead>
+          <tbody id="movie-list">
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2017 Sara Frandsen, Nkiru Onwuneme, Amy Cash
+  </footer>
+
+  <!-------------------------->
+  <!-------------------------->
+
+  <!-- STATUS MESSAGE -->
+  <script type="text/template" id="status-msg-template">
+
+  </script>
+
+  <!-- SINGLE MOVIE TEMPLATE -->
+  <!-- <script type="text/template" id="movie-template">
+    <h2><%- title %></h2>
+    <p><%- overiew %></p>
+  </script> -->
+
+  <!-- MOVIES TEMPLATE -->
+  <script type="text/template" id="movies-template">
+    <tr data-id="<%- id %>" id="<%- id %>" class="movies">
+      <td>
+        <img src="<%- imgUrl -%>">
+      </td>
+      <td>
+        <%- title %>
+      </td>
+      <td>
+        <%- releaseDate %>
+      </td>
+      <td>
+        <%- inventory %>
+      </td>
+    </tr>
+  </script>
+
+  <!-- CREATE NEW MOVIE TEMPLATE -->
+  <!-- <script type="text/template" id="create-new-movie-template">
+    <h2>Add a Trip</h2>
+    <form id="add-movie-form">
+      <label for="title">Title</label>
+      <input type="text" name="title"></input>
+
+      <label for="overview">Overview</label>
+      <input type="text" name="overview"></input>
+
+      <label for="release-date">Release Date</label>
+      <input type="number" name="release-date"></input>
+
+      <label for="inventory">Inventory</label>
+      <input type="number" name="inventory"></input>
+
+      <input type="submit" value="Add New Movie" class="button"></input>
+    </form>
+  </script> -->
+
+  <script src="/app.bundle.js"></script>
+
+</body>
+</html>
