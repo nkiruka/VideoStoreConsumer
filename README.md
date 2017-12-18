@@ -10,7 +10,7 @@ This is a [Phase 3](https://github.com/Ada-Developers-Academy/pedagogy/blob/mast
 - Revisit Rails API functionality
 - Practice project management skills in prioritizing features and determining deliverables
 
-This project has two main components: a Rails API and a Backbone front-end. You will be extending an existing Rails API to add some of the functionality that you require to complete the front-end implementation. You will be submitting a pull request at the end of the project for both components.
+This project has two main components: a [Rails API](https://github.com/Ada-C8/VideoStoreConsumer-API) and a Backbone front-end. You will be extending an existing Rails API to add some of the functionality that you require to complete the front-end implementation. You will be submitting a pull request at the end of the project for both components.
 
 ## Problem Statement
 
