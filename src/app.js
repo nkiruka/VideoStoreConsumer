@@ -42,9 +42,15 @@ $(document).ready(function() {
       reset: true,
     })
     $('#library-movies').show();
+    $('#show-movies').hide();
+    $('#search-movies').show();
     console.log('click');
-    $('.hero').animate({height:'40vh'});
+    $('.hero').animate({height:'30vh'});
   });
+
+  $('#search-movies').on('click', function(event) {
+    $('#movie-search-form').show();
+  })
 });
 
 //instruct bb to retrieve data

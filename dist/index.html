@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Backbone Baseline</title>
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto" rel="stylesheet">
+  <title>Video Store</title>
 </head>
 <body>
 
@@ -11,6 +12,8 @@
       <h1>Video Store</h1>
       <span><h5>
         <button id="show-movies" class="button secondary hollow">Show Movies</button>
+
+        <button id="search-movies" class="button secondary hollow hidden">Search Database</button>
       </h5></span>
     </div>
   </header>
@@ -21,11 +24,13 @@
     <span id="status-msg"></span>
     <span id="confirmation-msg"></span>
     <!-- SEARCH -->
-    <h1>Search</h1>
-    <form id="movie-search-form">
-      <input id="query" type="text" name="query" />
-      <input type="submit" value="Search" />
-    </form>
+    <section id="movie-search-form" class="hidden">
+      <h1>Search</h1>
+      <form>
+        <input id="query" type="text" name="query" />
+        <input type="submit" value="Search" />
+      </form>
+    </section>
 
     <h1 id="movie-library">Library</h1>
     <ul id="library-movies"></ul>
@@ -50,7 +55,7 @@
       <button class="btn-add alert button" style="<%- external_id ? '' : 'display:none;' %>">Add to Library</button>
     </li>
   </script>
-  
+
   <script src="/app.bundle.js"></script>
 
 </body>

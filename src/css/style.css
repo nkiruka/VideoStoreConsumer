@@ -11,9 +11,10 @@ body{
 
 /* header */
 .hero {
-  background: url('https://i.imgur.com/cq3UAle.jpg') 30% no-repeat;
+  /* background: url('https://i.imgur.com/cq3UAle.jpg') 30% no-repeat; */
   /* img of canyons with several hot air balloons */
   /* Photo by Egzon Bytyqi on Unsplash */
+  background-color: #5DBCD2;
   background-size: cover;
   height: 100vh;
   text-align: center;
