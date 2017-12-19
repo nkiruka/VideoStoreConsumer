@@ -1,15 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Backbone Baseline</title>
-  </head>
-  <body>
-    <main id="main-content">
-      
-    </main>
+<head>
+  <meta charset="utf-8">
+  <title>Backbone Baseline</title>
+</head>
+<body>
+  <main id="main-content">
+    <h1>Search</h1>
+    <form id="movie-search-form">
+      <input id="query" type="text" name="query" />
+      <input type="submit" value="GO" />
+    </form>
+    <h1 id="movie-library">Library</h1>
+    <ul id="library-movies"></ul>
 
-    <script src="/app.bundle.js"></script>
+  </main>
 
-  </body>
-  </html>
+  <script src="/app.bundle.js"></script>
+
+  <script type="text/template" id="movie-template">
+    <li class="movie">
+      <%- title %>
+      <img src="<%- image_url %>" />
+      <button class="btn-add alert button" style="<%- external_id ? '' : 'display:none;' %>">Add to Library</button>
+    </li>
+  </script>
+
+</body>
+</html>
