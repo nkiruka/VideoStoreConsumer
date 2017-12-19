@@ -1,4 +1,5 @@
 import Backbone from 'backbone';
+import _ from 'underscore';
 
 import MovieView from './movie_view';
 import Movie from '../models/movie';

@@ -6,24 +6,47 @@
   <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto" rel="stylesheet">
 </head>
 <body>
-  <header class="hero">
+  <h1>Search</h1>
+  <ul id="library-movies"></ul>
+
+
+
+
+
+<script src="/app.bundle.js"></script>
+
+
+  <script type="text/template" id="movie-template">
+    <li class="movie">
+      <%- title %>
+    </li>
+  </script>
+
+
+
+
+
+
+
+
+  <!-- <header class="hero">
     <div class="hero-section-text">
       <h1>Video Store</h1>
       <span><h5>
         <button id="show-movies" class="button secondary hollow">Show Movies</button>
         <button id="movie-create-new-btn" class="button secondary hollow">Create New Movie</button>
-      </h5></span>
-    </div>
-  </header>
+      </h5></span> -->
+    <!-- </div>
+  </header> -->
 
-  <main id="main-content">
+  <!-- <main id="main-content"> -->
     <!-- MESSAGES -->
-    <span id="status-msg"></span>
-    <span id="confirmation-msg"></span>
+    <!-- <span id="status-msg"></span>
+    <span id="confirmation-msg"></span> -->
 
     <!-- ADD MOVIE #movie-create-new -->
     <!-- <article id="movie-create-new" class="columns large-12 small-12">
-      <!-- create new movie form -->
+      create new movie form
     </article> -->
 
     <!-- SINGLE MOVIE #movie-overview -->
@@ -31,7 +54,7 @@
     </article> -->
 
     <!-- MOVIE LIST #movie-list -->
-    <div id="movie-list">
+    <!-- <div id="movie-list">
       <section>
         <table id="movie-list-table" class="hover stack">
           <thead>
@@ -45,38 +68,38 @@
         </table>
       </section>
     </div>
-  </main>
+  </main> -->
 
-  <footer>
-    &copy; 2017 Sara Frandsen, Nkiru Onwuneme, Amy Cash
-  </footer>
+  <!-- <footer>
+    &copy; 2017 Sara Frandsen, Nkiru Onwuneme, Amy Cash -->
+  <!-- </footer> -->
 
   <!-------------------------->
   <!-------------------------->
 
   <!-- STATUS MESSAGE -->
-  <script type="text/template" id="status-msg-template">
+  <!-- <script type="text/template" id="status-msg-template">
 
-  </script>
+  </script> -->
 
   <!-- SINGLE MOVIE TEMPLATE -->
   <!-- <script type="text/template" id="movie-template">
-    <h2><%- title %></h2>
-    <p><%- overiew %></p>
+    <h2><#%- title %></h2>
+    <p><#%- overiew %></p>
   </script> -->
 
   <!-- MOVIES TEMPLATE -->
-  <script type="text/template" id="movies-template">
-    <tr data-id="<%- id %>" id="<%- id %>" class="movies">
+  <!-- <script type="text/template" id="movies-template">
+    <tr data-id="<#%- id %>" id="<#%- id %>" class="movies">
 
       <td>
-        <%- title %>
+        <#%- title %>
       </td>
       <td>
-        <%- release_date %>
+        <#%- release_date %>
       </td>
     </tr>
-  </script>
+  </script> -->
 
 
   <!-- CREATE NEW MOVIE TEMPLATE -->
@@ -100,7 +123,7 @@
   </script>
 -->
 
-  <script src="/app.bundle.js"></script>
+
 
 </body>
 </html>
