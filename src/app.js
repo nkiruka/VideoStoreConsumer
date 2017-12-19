@@ -39,19 +39,19 @@ $(document).ready(function() {
   // overviewTemplate = _.template($('#movie-template').html());
   // createNewMovieTemplate = _.template($('#create-new-movie-template').html());
 
-  $('#show-movies').on('click', function() {
-    console.log('show movies: clicked');
-    $('#movie-create-new').hide();
-    /// need clarification on this /////
-    movieList.on('update', loadMovies);
-    movieList.on('sort', loadMovies);
-    movieList.fetch({
-      success: () => {
-        $('#movie-list-table').show();
-        console.log('show list table: success');
-        $('.hero').animate({height:'40vh'});
-      },
-    });
-  });
+  // $('#show-movies').on('click', function() {
+  //   console.log('show movies: clicked');
+  //   $('#movie-create-new').hide();
+  //   /// need clarification on this /////
+  //   movieList.on('update', loadMovies);
+  //   movieList.on('sort', loadMovies);
+  //   movieList.fetch({
+  //     success: () => {
+  //       $('#movie-list-table').show();
+  //       console.log('show list table: success');
+  //       $('.hero').animate({height:'40vh'});
+  //     },
+  //   });
+  // });
 
 });
