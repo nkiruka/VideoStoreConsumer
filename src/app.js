@@ -6,30 +6,31 @@ import 'css/_settings.css';
 import './css/style.css';
 // MODEL VIEW AND COLLECTION
 import Movie from './models/movie';
+import MovieView from './views/movie_view';
 import MovieList from './collections/movie_list';
 import MovieListView from './views/movie_list_view';
 
 
-const movieList = new MovieList();
 
-const MOVIE_FIELDS = ['id', 'title', 'overview', 'release_date', 'image_url'];
+
+// const MOVIE_FIELDS = ['id', 'title', 'overview', 'release_date', 'image_url'];
 
 // TEMPLATES
-let moviesTemplate;
+
 // let overviewTemplate;
 // let createNewMovieTemplate;
 
 // RENDER LIST OF TRIPS
-const loadMovies = function loadMovies(movieList) {
-  const moviesTableElement = $('#movie-list');
-  moviesTableElement.html('');
-
-  movieList.forEach((movie) => {
-    const generatedHTML = $(moviesTemplate(movie.attributes));
-    moviesTableElement.append(generatedHTML);
-  });
-};
-
+// const loadMovies = function loadMovies(movieList) {
+//   const moviesTableElement = $('#movie-list');
+//   moviesTableElement.html('');
+//
+//   movieList.forEach((movie) => {
+//     const generatedHTML = $(moviesTemplate(movie.attributes));
+//     moviesTableElement.append(generatedHTML);
+//   });
+// };
+let moviesTemplate;
 
 
 // ready to go
@@ -38,20 +39,32 @@ $(document).ready(function() {
   moviesTemplate = _.template($('#movies-template').html());
   // overviewTemplate = _.template($('#movie-template').html());
   // createNewMovieTemplate = _.template($('#create-new-movie-template').html());
+  const movies = new MovieList();
+  console.log("Set up movieList");
 
-  $('#show-movies').on('click', function() {
-    console.log('show movies: clicked');
-    $('#movie-create-new').hide();
-    /// need clarification on this /////
-    movieList.on('update', loadMovies);
-    movieList.on('sort', loadMovies);
-    movieList.fetch({
-      success: () => {
-        $('#movie-list-table').show();
-        console.log('show list table: success');
-        $('.hero').animate({height:'40vh'});
-      },
-    });
+
+
+  const movieListView = new MovieListView({
+    model: movies,
+    template: moviesTemplate,
+    el: 'main',
   });
+  console.log("before fetch");
 
-});
+  movies.fetch();
+  // $('#show-movies').on('click', function() {
+  //   console.log('show movies: clicked');
+  //   $('#movie-create-new').hide();
+  //   /// need clarification on this /////
+  //   movieList.on('update', loadMovies);
+  //   movieList.on('sort', loadMovies);
+  //   movieList.fetch({
+  //     success: () => {
+  //       $('#movie-list-table').show();
+  //       console.log('show list table: success');
+  //       $('.hero').animate({height:'40vh'});
+  //     },
+  //   });
+  // });
+
+}); // end document ready
