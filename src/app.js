@@ -37,15 +37,17 @@ $(document).ready(function() {
     // console.log(query);
   });
 
+/// HEADER ANIMATIONS ///
   $('#show-movies').on('click', function(event) {
     movies.fetch({
       reset: true,
     })
-    $('#library-movies').show();
+    $('#movie-library').show();
     $('#show-movies').hide();
     $('#search-movies').show();
     console.log('click');
-    $('.hero').animate({height:'30vh'});
+    $('.hero').animate({height:'20vh'});
+    $('.hero-section-text h1').animate({fontSize:'30px'});
   });
 
   $('#search-movies').on('click', function(event) {

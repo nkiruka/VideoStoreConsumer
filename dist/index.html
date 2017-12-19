@@ -11,9 +11,9 @@
     <div class="hero-section-text">
       <h1>Video Store</h1>
       <span><h5>
-        <button id="show-movies" class="button secondary hollow">Show Movies</button>
+        <button id="show-movies" class="movie-button button secondary hollow">Show Movies</button>
 
-        <button id="search-movies" class="button secondary hollow hidden">Search Database</button>
+        <button id="search-movies" class="movie-button button secondary hollow hidden">Search Database</button>
       </h5></span>
     </div>
   </header>
@@ -32,8 +32,8 @@
       </form>
     </section>
 
-    <h1 id="movie-library">Library</h1>
-    <ul id="library-movies"></ul>
+    <section id="movie-library" class="movie-library-list list-results">
+    </section>
 
   </main>
 
@@ -49,11 +49,11 @@
 
   <!-- SINGLE MOVIE TEMPLATE -->
   <script type="text/template" id="movie-template">
-    <li class="movie">
-      <%- title %>
-      <img src="<%- image_url %>" />
-      <button class="btn-add alert button" style="<%- external_id ? '' : 'display:none;' %>">Add to Library</button>
-    </li>
+
+    <h3><%- title %></h3>
+    <img src="<%- image_url %>" />
+    <button class="btn-add alert button" style="<%- external_id ? '' : 'display:none;' %>">Add to Library</button>
+
   </script>
 
   <script src="/app.bundle.js"></script>

@@ -11,16 +11,16 @@ const MovieListView = Backbone.View.extend ({
   }, //can listen to update or reset
 
   render() {
-    this.$('#library-movies').empty();
+    this.$('#movie-library').empty();
     this.model.each((movie) => {
       const movieView = new MovieView ({
         model: movie,
         template: this.template,
-        tagName: 'li',
-        className: 'movie',
+        tagName: 'div',
+        className: 'movie-div',
       });
 
-      this.$('#library-movies').append(movieView.render().$el);
+      this.$('#movie-library').append(movieView.render().$el);
 
     });
     return this;
