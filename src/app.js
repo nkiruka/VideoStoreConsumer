@@ -1,10 +1,9 @@
-import 'css/_settings.css';
-import 'foundation-sites/dist/css/foundation.css';
-import './css/styles.css';
-
-// Import jQuery & Underscore
 import $ from 'jquery';
 import _ from 'underscore';
+// CSS
+import './css/foundation.css';
+import 'css/_settings.css';
+import './css/style.css';
 
 import MovieList from 'collections/movie_list';
 
@@ -38,10 +37,13 @@ $(document).ready(function() {
     // console.log(query);
   });
 
-  $('#movie-library').on('click', function(event) {
+  $('#show-movies').on('click', function(event) {
     movies.fetch({
-      reset: true
+      reset: true,
     })
+    $('#library-movies').show();
+    console.log('click');
+    $('.hero').animate({height:'40vh'});
   });
 });
 

@@ -53,8 +53,8 @@ body{
   height: 60vh;
 }
 
-/* table */
-#movie-list-table {
+/* list of movies */
+#library-movies {
   display: none;
   /*float:left;*/
 }
