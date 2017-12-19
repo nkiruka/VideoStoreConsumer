@@ -5,19 +5,44 @@
   <title>Backbone Baseline</title>
 </head>
 <body>
+
+  <header class="hero">
+    <div class="hero-section-text">
+      <h1>Video Store</h1>
+      <span><h5>
+        <button id="show-movies" class="button secondary hollow">Show Movies</button>
+      </h5></span>
+    </div>
+  </header>
+
+
   <main id="main-content">
+    <!-- MESSAGES -->
+    <span id="status-msg"></span>
+    <span id="confirmation-msg"></span>
+    <!-- SEARCH -->
     <h1>Search</h1>
     <form id="movie-search-form">
       <input id="query" type="text" name="query" />
-      <input type="submit" value="GO" />
+      <input type="submit" value="Search" />
     </form>
+
     <h1 id="movie-library">Library</h1>
     <ul id="library-movies"></ul>
 
   </main>
 
-  <script src="/app.bundle.js"></script>
+  <footer>
+    &copy; 2017 Sara Frandsen, Nkiru Onwuneme, Amy Cash
+  </footer>
+  <!-------------------------->
+  <!-------------------------->
 
+  <!-- STATUS MESSAGE -->
+  <script type="text/template" id="status-msg-template">
+  </script>
+
+  <!-- SINGLE MOVIE TEMPLATE -->
   <script type="text/template" id="movie-template">
     <li class="movie">
       <%- title %>
@@ -25,6 +50,8 @@
       <button class="btn-add alert button" style="<%- external_id ? '' : 'display:none;' %>">Add to Library</button>
     </li>
   </script>
+  
+  <script src="/app.bundle.js"></script>
 
 </body>
 </html>
