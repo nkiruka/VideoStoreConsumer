@@ -52,6 +52,28 @@ $(document).ready(function() {
   console.log("before fetch");
 
   movies.fetch();
+
+  $('#movie-search-form').on('submit', function(event) {
+    event.preventDefault();
+    let queryText = $('#query').val().trim();
+
+    if (queryText.length > 0) {
+      movies.fetch({
+        reset: true,
+        data: { query: queryText }
+      });
+    } else {
+      movies.reset();
+    }
+  });
+
+$('#movie-library').on('click', function(event) {
+  movies.fetch({
+    reset: true
+  })
+});
+}); // end document ready
+
   // $('#show-movies').on('click', function() {
   //   console.log('show movies: clicked');
   //   $('#movie-create-new').hide();
@@ -66,5 +88,3 @@ $(document).ready(function() {
   //     },
   //   });
   // });
-
-}); // end document ready
