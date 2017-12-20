@@ -6,19 +6,25 @@ import 'css/_settings.css';
 import './css/style.css';
 
 import MovieList from 'collections/movie_list';
-
 import MovieListView from './views/movie_list_view';
+
+let moviesTemplate;
 
 // ready to go
 $(document).ready(function() {
-
+  // TEMPLATES
+  moviesTemplate = _.template($('#movies-template').html());
+  // overviewTemplate = _.template($('#movie-template').html());
+  // createNewMovieTemplate = _.template($('#create-new-movie-template').html());
   const movies = new MovieList();
+  console.log("Set up movieList");
 
   const movieListView = new MovieListView ({
     model: movies,
     template: _.template($('#movie-template').html()),
     el: 'main',
   });
+  console.log("before fetch");
 
   movies.fetch(); //bb will call rails s
 

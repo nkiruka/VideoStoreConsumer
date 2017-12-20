@@ -11,17 +11,19 @@ const MovieView = Backbone.View.extend({
     const compiledTemplate = this.template(this.model.toJSON());
     this.$el.html(compiledTemplate);
 
+    console.log("in movie render function");
     return this;
-  }, //render
+  },
 
   events: {
     'click button.btn-add': 'add',
   },
 
   add(event) {
-    console.log('New rentals for $5')
+    console.log('New rentals for $5!');
     this.model.save();
   }
-});
+
+}); // end of movie view
 
 export default MovieView;

@@ -5,14 +5,18 @@ body:
 font-family: 'Roboto', sans-serif;
 */
 
+<<<<<<< HEAD
 .hidden {
   display: none;
 }
 
+=======
+>>>>>>> master
 body{
   font-family: 'Roboto', sans-serif;
 }
 
+<<<<<<< HEAD
 /********************/
 /****** header ******/
 .hero {
@@ -20,6 +24,13 @@ body{
   /* img of canyons with several hot air balloons */
   /* Photo by Egzon Bytyqi on Unsplash */
   background-color: #5DBCD2;
+=======
+/* header */
+.hero {
+  background: url('https://i.imgur.com/cq3UAle.jpg') 30% no-repeat;
+  /* img of canyons with several hot air balloons */
+  /* Photo by Egzon Bytyqi on Unsplash */
+>>>>>>> master
   background-size: cover;
   height: 100vh;
   text-align: center;
@@ -35,13 +46,18 @@ body{
   font-family: 'Abril Fatface', cursive;
 }
 
+<<<<<<< HEAD
 /*********************/
 /****** buttons ******/
 #show-movies, #search-movies {
+=======
+#show-movies, #movie-create-new-btn {
+>>>>>>> master
   color: white;
   border-color: white;
 }
 
+<<<<<<< HEAD
 #show-movies:hover, #search-movies:hover {
   color: #20333e;
 }
@@ -74,4 +90,47 @@ body{
 .movie-div {
   display: inline-block;
   width: 250px;
+=======
+#show-movies:hover, #movie-create-new-btn:hover {
+  color: #20333e;
+}
+
+#list {
+  height: 60vh;
+  overflow: scroll;
+}
+
+.hidden {
+  display: none;
+}
+
+#movie-overview {
+  overflow: scroll;
+  position: relative;
+  height: 60vh;
+}
+
+/* table */
+#movie-list-table {
+  display: none;
+  /*float:left;*/
+}
+
+th.sort {
+  cursor: pointer;
+  background-color: #A7CCA7;
+}
+
+th.current-sort-field {
+  background-color: #647A6C;
+  color: white;
+}
+
+#movie-list-table tr:nth-child(even) {
+  background-color: #EDE3E4;
+}
+
+#movie-list-table tr:nth-child(odd) {
+  background-color: #F1EAEB;
+>>>>>>> master
 }
