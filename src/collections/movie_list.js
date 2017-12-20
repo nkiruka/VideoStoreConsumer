@@ -1,15 +1,4 @@
 import Backbone from 'backbone';
-<<<<<<< HEAD
-import Movie from '../models/movie';
-
-const MovieList = Backbone.Collection.extend({
-  model: Movie,
-  url: 'http://localhost:3000/movies',
-
-});
-
-export default MovieList;  //what the file represents
-=======
 import Movie from 'models/movie';
 
 const MovieList = Backbone.Collection.extend({
@@ -18,4 +7,3 @@ const MovieList = Backbone.Collection.extend({
 });
 
 export default MovieList;
->>>>>>> master

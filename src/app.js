@@ -13,7 +13,7 @@ let moviesTemplate;
 // ready to go
 $(document).ready(function() {
   // TEMPLATES
-  moviesTemplate = _.template($('#movies-template').html());
+  moviesTemplate = _.template($('#movie-template').html());
   // overviewTemplate = _.template($('#movie-template').html());
   // createNewMovieTemplate = _.template($('#create-new-movie-template').html());
   const movies = new MovieList();
