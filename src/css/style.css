@@ -50,6 +50,17 @@ input {
   display: inline;
 }
 
+/*************************/
+/****** search form ******/
+.form-style li {
+  display: inline-block;
+  list-style: none;
+}
+
+.form-style input {
+  margin: 0;
+}
+
 /**************************/
 /****** single movie ******/
 #movie-library {
