@@ -48,14 +48,10 @@ $(document).ready(function() {
     movies.fetch({
       reset: true,
     });
-    // $('#search-movies').show(); //show search btn
     $('#movie-library').show(); //show library list
-    $('.hero').animate({height:'20vh'}); //header height
-    $('.hero-section-text h1').animate({fontSize:'30px'}); //header font size
-  });
-
-  $('#search-movies').on('click', function(event) {
-    $('#movie-search-form').slideToggle();
+    $('.hero').animate({height:'15vh'}, 1000); //header height
+    $('.hero-section-text').fadeOut(1000); // header fade out
+    $('#movie-search-form').delay(1000).slideDown(1000)
   });
 });
 

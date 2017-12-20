@@ -46,12 +46,16 @@ body{
   color: #20333e;
 }
 
+input {
+  display: inline;
+}
+
 /**************************/
 /****** single movie ******/
 #movie-library {
   overflow: scroll;
   position: relative;
-  height: 80vh;
+  height: 95vh;
 }
 
 /****************************/

@@ -11,11 +11,16 @@
     <div class="hero-section-text">
       <h1>Video Store</h1>
       <span><h5>
-        <button id="show-movies" class="movie-button button secondary hollow">Show Movies</button>
-
-        <button id="search-movies" class="movie-button button secondary hollow">Search Database</button>
+        <button id="show-movies" class="movie-button button secondary hollow">Check out what's in stock!</button>
       </h5></span>
     </div>
+    <!-- SEARCH -->
+    <form id="movie-search-form" class="hidden input-group">
+      <input id="query" type="text" name="query" placeholder="Enter a movie title" class="input-group-field"/>
+      <div class="input-group-button">
+        <input type="submit" class="button " value="Search"/>
+      </div>
+    </form>
   </header>
 
 
@@ -23,14 +28,6 @@
     <!-- MESSAGES -->
     <span id="status-msg"></span>
     <span id="confirmation-msg"></span>
-    <!-- SEARCH -->
-    <section id="movie-search-form" class="hidden">
-      <h1>Search</h1>
-      <form>
-        <input id="query" type="text" name="query" />
-        <input type="submit" value="Search" />
-      </form>
-    </section>
 
 
     <!-- LIST OF MOVIES -->
@@ -38,7 +35,6 @@
       <section id="movie-library">
       </section>
     </section>
-
   </main>
 
   <footer>
