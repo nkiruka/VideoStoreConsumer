@@ -1,4 +1,5 @@
 import Backbone from 'backbone';
+
 const Movie = Backbone.Model.extend({
 
 });
