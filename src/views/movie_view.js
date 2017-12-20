@@ -16,11 +16,14 @@ const MovieView = Backbone.View.extend({
     return this;
   },
 
-  // events: {
-  //
-  // }
+  events: {
+    'click button.btn-add': 'add',
+  },
 
-
+  add(event) {
+    console.log('New rentals for $5!');
+    this.model.save();
+  }
 
 }); // end of movie view
 
