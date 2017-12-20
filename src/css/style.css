@@ -64,12 +64,22 @@ input {
   margin: 0;
 }
 
+.flex {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3px;
+}
+
+.title {
+  margin-left: 25px;
+}
+
 /**************************/
 /****** single movie ******/
 #movie-library {
   overflow: scroll;
   position: relative;
-  height: 95vh;
+  height: 90vh;
 }
 
 /****************************/
@@ -92,4 +102,11 @@ input {
 .movie-div {
   display: inline-block;
   width: 250px;
+}
+
+/********************/
+/****** FOOTER ******/
+footer {
+  text-align: center;
+  width: 100%;
 }
