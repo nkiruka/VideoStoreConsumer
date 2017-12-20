@@ -48,11 +48,13 @@ $(document).ready(function() {
     movies.fetch({
       reset: true,
     });
-    $('#movie-library').show(); //show library list
-    $('.hero').animate({height:'15vh'}, 1000); //header height
-    $('.hero-section-text').fadeOut(1000); // header fade out
-    $('#movie-search-form').delay(1000).slideDown(1000)
+    $('header').slideUp(1000); //show library list
+    $('#movie-search-form').slideDown(1000);
+    $('#movie-library').slideDown(1000); //header height
   });
+
+/// RESULTS ANIMATIONS ///
+  
 });
 
 //instruct bb to retrieve data
