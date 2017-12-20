@@ -47,8 +47,7 @@ $(document).ready(function() {
   $('#show-movies').on('click', function(event) {
     movies.fetch({
       reset: true,
-    })
-    // $('#show-movies').hide(); //hide show movies btn
+    });
     // $('#search-movies').show(); //show search btn
     $('#movie-library').show(); //show library list
     $('.hero').animate({height:'20vh'}); //header height
@@ -56,8 +55,8 @@ $(document).ready(function() {
   });
 
   $('#search-movies').on('click', function(event) {
-    $('#movie-search-form').slideDown();
-  })
+    $('#movie-search-form').slideToggle();
+  });
 });
 
 //instruct bb to retrieve data
