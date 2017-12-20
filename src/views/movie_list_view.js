@@ -1,34 +1,30 @@
 import Backbone from 'backbone';
 import _ from 'underscore';
 
-import MovieView from './movie_view';
 import Movie from '../models/movie';
+import MovieView from '../views/movie_view';
 
-
-
-const MovieListView = Backbone.View.extend({
-
+const MovieListView = Backbone.View.extend ({
   initialize(params) {
     this.template = params.template;
     this.listenTo(this.model, 'update reset', this.render);
-  },
+  }, //can listen to update or reset
 
-  render(){
-    console.log("In Movie List render function");
-    this.$('#library-movies').empty();
+  render() {
+    this.$('#movie-library').empty();
     this.model.each((movie) => {
       const movieView = new MovieView ({
         model: movie,
         template: this.template,
-        tagName: 'li',
-        className: 'movie',
+        tagName: 'div',
+        className: 'movie-div',
       });
 
-      this.$('#library-movies').append(movieView.render().$el);
+      this.$('#movie-library').append(movieView.render().$el);
 
     });
     return this;
-  },
-}); // end movie list view
+  }
+});
 
 export default MovieListView;

@@ -5,15 +5,32 @@ body:
 font-family: 'Roboto', sans-serif;
 */
 
+<<<<<<< HEAD
+.hidden {
+  display: none;
+}
+
+=======
+>>>>>>> master
 body{
   font-family: 'Roboto', sans-serif;
 }
 
+<<<<<<< HEAD
+/********************/
+/****** header ******/
+.hero {
+  /* background: url('https://i.imgur.com/cq3UAle.jpg') 30% no-repeat; */
+  /* img of canyons with several hot air balloons */
+  /* Photo by Egzon Bytyqi on Unsplash */
+  background-color: #5DBCD2;
+=======
 /* header */
 .hero {
   background: url('https://i.imgur.com/cq3UAle.jpg') 30% no-repeat;
   /* img of canyons with several hot air balloons */
   /* Photo by Egzon Bytyqi on Unsplash */
+>>>>>>> master
   background-size: cover;
   height: 100vh;
   text-align: center;
@@ -29,11 +46,51 @@ body{
   font-family: 'Abril Fatface', cursive;
 }
 
+<<<<<<< HEAD
+/*********************/
+/****** buttons ******/
+#show-movies, #search-movies {
+=======
 #show-movies, #movie-create-new-btn {
+>>>>>>> master
   color: white;
   border-color: white;
 }
 
+<<<<<<< HEAD
+#show-movies:hover, #search-movies:hover {
+  color: #20333e;
+}
+
+/**************************/
+/****** single movie ******/
+#movie-library {
+  overflow: scroll;
+  position: relative;
+  height: 80vh;
+}
+
+/****************************/
+/****** list of movies ******/
+.movie-list-container {
+  display: flex;
+}
+
+#movie-library {
+  display: none;
+  justify-content: space-around;
+
+}
+
+.movie-library-list {
+  height: 70vh;
+  overflow: scroll;
+}
+
+.movie-div {
+  display: inline-block;
+  width: 250px;
+=======
 #show-movies:hover, #movie-create-new-btn:hover {
   color: #20333e;
 }
@@ -75,4 +132,5 @@ th.current-sort-field {
 
 #movie-list-table tr:nth-child(odd) {
   background-color: #F1EAEB;
+>>>>>>> master
 }

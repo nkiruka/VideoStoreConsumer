@@ -2,8 +2,7 @@ import Backbone from 'backbone';
 import Movie from '../models/movie';
 
 const MovieView = Backbone.View.extend({
-
-  initialize(params){
+  initialize(params) {
     this.template = params.template;
     this.listenTo(this.model, 'change', this.render);
   },
