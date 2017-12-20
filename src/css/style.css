@@ -56,15 +56,22 @@ body{
 
 /****************************/
 /****** list of movies ******/
+.movie-list-container {
+  display: flex;
+}
+
 #movie-library {
   display: none;
+  justify-content: space-around;
+
 }
 
 .movie-library-list {
-  flex-direction: row;
-}
-
-.list-results {
   height: 70vh;
   overflow: scroll;
+}
+
+.movie-div {
+  display: inline-block;
+  width: 250px;
 }

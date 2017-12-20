@@ -42,16 +42,15 @@ $(document).ready(function() {
     movies.fetch({
       reset: true,
     })
-    $('#movie-library').show();
-    $('#show-movies').hide();
-    $('#search-movies').show();
-    console.log('click');
-    $('.hero').animate({height:'20vh'});
-    $('.hero-section-text h1').animate({fontSize:'30px'});
+    // $('#show-movies').hide(); //hide show movies btn
+    // $('#search-movies').show(); //show search btn
+    $('#movie-library').show(); //show library list
+    $('.hero').animate({height:'20vh'}); //header height
+    $('.hero-section-text h1').animate({fontSize:'30px'}); //header font size
   });
 
   $('#search-movies').on('click', function(event) {
-    $('#movie-search-form').show();
+    $('#movie-search-form').slideDown();
   })
 });
 
