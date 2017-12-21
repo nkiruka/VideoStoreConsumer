@@ -53,8 +53,12 @@ $(document).ready(function() {
     $('#movie-library').slideDown(1000); //header height
   });
 
+  $('#title').on('click', function(event) {
+    $('#movie-library').show();
+  });
+
 /// RESULTS ANIMATIONS ///
-  
+
 });
 
 //instruct bb to retrieve data
