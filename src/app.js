@@ -54,7 +54,10 @@ $(document).ready(function() {
   });
 
   $('#title').on('click', function(event) {
-    $('#movie-library').show();
+    movies.fetch({
+      reset: true,
+    });
+    $('#movie-library').slideDown(1000);
   });
 
 /// RESULTS ANIMATIONS ///
