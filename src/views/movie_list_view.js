@@ -24,7 +24,15 @@ const MovieListView = Backbone.View.extend ({
 
     });
     return this;
+  },
+  events: {
+    'click #titleLink' : 'showMovieDetails'
+  },
+
+  showMovieDetails: function () {
+    this.trigger('showMovieDetails')
   }
+
 });
 
 export default MovieListView;

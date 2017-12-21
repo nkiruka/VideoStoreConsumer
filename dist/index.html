@@ -35,6 +35,9 @@
       <section id="movie-library">
       </section>
     </section>
+    <section id="show-movie-details"></section>
+
+    
   </main>
 
   <footer>
@@ -47,10 +50,19 @@
   <script type="text/template" id="status-msg-template">
   </script>
 
-  <!-- SINGLE MOVIE TEMPLATE -->
+<!--SHOW MOVIE DETAIL TEMPLATE -->
+<script type="text/template" id="movie-details">
+
+  <h3><%- title %></h3>
+  <img src="<%- image_url %>" />
+  <button class="btn-add alert button" style="<%- external_id ? '' : 'display:none;' %>">Add to Library</button>
+
+</script>
+
+  <!--LIST OF MOVIES TEMPLATE -->
   <script type="text/template" id="movie-template">
 
-    <h3><%- title %></h3>
+    <a id="titleLink"><h3><%- title %></h3></a>
     <img src="<%- image_url %>" />
     <button class="btn-add alert button" style="<%- external_id ? '' : 'display:none;' %>">Add to Library</button>
 

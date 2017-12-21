@@ -7,13 +7,17 @@ import './css/style.css';
 
 import MovieList from 'collections/movie_list';
 import MovieListView from './views/movie_list_view';
+import Movie from 'models/movie';
+import MovieDetailsView from './views/movie_details_view';
 
 let moviesTemplate;
-
+let movieDetailsTemplate;
 // ready to go
 $(document).ready(function() {
   // TEMPLATES
   moviesTemplate = _.template($('#movie-template').html());
+
+  movieDetailsTemplate = _.template($('#movie-details').html());
   // overviewTemplate = _.template($('#movie-template').html());
   // createNewMovieTemplate = _.template($('#create-new-movie-template').html());
   const movies = new MovieList();
@@ -43,7 +47,7 @@ $(document).ready(function() {
     // console.log(query);
   });
 
-/// HEADER ANIMATIONS ///
+  /// HEADER ANIMATIONS ///
   $('#show-movies').on('click', function(event) {
     movies.fetch({
       reset: true,
@@ -51,8 +55,17 @@ $(document).ready(function() {
     $('#movie-library').show(); //show library list
     $('.hero').animate({height:'15vh'}, 1000); //header height
     $('.hero-section-text').fadeOut(1000); // header fade out
-    $('#movie-search-form').delay(1000).slideDown(1000)
+    $('#movie-search-form').delay(1000).slideDown(1000);
   });
+
+  // showMovieDetails: function () {
+  //   let movieDetailsView  = new MovieDetailsView({
+  //     model: movie,
+  //     template: this.movieDetailsTemplate,
+  //     el: 'body'
+  //   });
+  //   movieDetailsView.render();
+  // }
 });
 
 //instruct bb to retrieve data
