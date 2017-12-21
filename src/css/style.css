@@ -99,9 +99,12 @@ input {
   overflow: scroll;
 }
 
-.movie-div {
+.movie-item {
   display: inline-block;
-  width: 250px;
+  list-style: none;
+  position: relative;
+  max-width: 185px;
+  transition: all .1s ease-in-out;
 }
 
 /********************/

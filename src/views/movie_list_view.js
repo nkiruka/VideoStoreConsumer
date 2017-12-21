@@ -16,8 +16,8 @@ const MovieListView = Backbone.View.extend ({
       const movieView = new MovieView ({
         model: movie,
         template: this.template,
-        tagName: 'div',
-        className: 'movie-div',
+        tagName: 'li',
+        className: 'movie-item',
       });
 
       this.$('#movie-library').append(movieView.render().$el);
