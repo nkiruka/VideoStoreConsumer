@@ -22,9 +22,9 @@
     <span id="status-msg"></span>
     <span id="confirmation-msg"></span>
 
-    <section class="flex">
-      <div class="title">
-        <span><h2>Video Store</h2></span>
+    <section class="flex nav">
+      <div>
+        <span id="title"><h2>Video Store</h2></span>
       </div>
       <div>
         <!-- SEARCH -->
@@ -60,11 +60,13 @@
 
   <!-- SINGLE MOVIE TEMPLATE -->
   <script type="text/template" id="movie-template">
-
-    <h3><%- title %></h3>
-    <img src="<%- image_url %>" />
-    <button class="btn-add alert button" style="<%- external_id ? '' : 'display:none;' %>">Add to Library</button>
-
+      <div id="item">
+      <h3><%- title %></h3>
+      <h5>(<%- release_date %>)</h5>
+      <p><%- overview.substr(0,50) %>...</p>
+      <img src="<%- image_url %>" />
+      <button class="btn-add alert button" style="<%- external_id ? '' : 'display:none;' %>">Add to Library</button>
+    </div>
   </script>
 
   <script src="/app.bundle.js"></script>

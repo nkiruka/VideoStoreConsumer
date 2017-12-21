@@ -28,6 +28,11 @@ body{
   justify-content: center;
 }
 
+.nav {
+  background-color: #5DBCD2;
+  color: #20333e;
+}
+
 .hero-section-text h1 {
   font-size: 5rem;
   color: #20333e;
@@ -72,6 +77,8 @@ input {
 
 .title {
   margin-left: 25px;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  font-family: 'Abril Fatface', cursive;
 }
 
 /**************************/
@@ -91,7 +98,13 @@ input {
 #movie-library {
   display: none;
   justify-content: space-around;
+}
 
+#movie-library li {
+  display: inline-block;
+  justify-content: space-around;
+  width: 190px;
+  height:
 }
 
 .movie-library-list {
@@ -99,12 +112,21 @@ input {
   overflow: scroll;
 }
 
-.movie-item {
+.movie {
   display: inline-block;
   list-style: none;
   position: relative;
   max-width: 185px;
   transition: all .1s ease-in-out;
+}
+
+
+.overview {
+  float: right;
+}
+
+li:hover {
+transform: scale(1.1);
 }
 
 /********************/
